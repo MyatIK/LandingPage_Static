@@ -1,7 +1,13 @@
 *{
     box-sizing: border-box;
 }
-
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 header {
     padding: 20px;
     display: flex;
@@ -147,6 +153,24 @@ header {
     display: none;
 }
 
+.closeicon{
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.menuicon {
+    display: none;
+}
+
+
+.menuicon{
+    display: none;
+}
+
+
 
 
 
@@ -183,18 +207,103 @@ header {
    .btn1 {
     margin: 20px 0 40px 120px;
    }
-   .menuBarMobile {
-    display: inline-block;
-    padding: 5px;
-    position: absolute;
-    right: 20px;
-   }
+  
    .navbar, .access{
     display: none;
    }
    .mainbrands {
     width: 20%;
    }
+   #hamburger-icon {
+    height: 100vh;
+    width: 60%;
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+   }
+
+   .menuicon {
+    display: block;
+    position: absolute;
+    right: 20px;
+
+   }
+
+   .dropdown .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: start;
+    width: 100%;
+    text-align: left;
+   }
+
+   .mobileMenu li {
+    margin-bottom: 15px;
+
+    }
+
+    .closeicon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin-bottom: 10px;
+    
+    }
+
+    .dropdown .dropbtn {
+        padding: 0;
+    }
+
+    .dropdown {
+        width: 100%;
+        display: block;
+
+    }
+    .dropdown-contentMobile {
+        padding: 10px;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items:start;
+       justify-content: start;
+       text-align: left;
+
+    }
+    
+    .dropdown-contentMobile a{
+        float: none;
+        color: black;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+
+    .accessMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .accessMobile a {
+        display: block;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    .btn {
+        width: 60%;
+
+    }
+
+
+   
 
 
 }

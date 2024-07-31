@@ -21,7 +21,7 @@
        -->
        <!-- add your style sheet here -->
         <link rel="stylesheet" href="style.css">   
-      
+
 
 
     </head>
@@ -32,7 +32,7 @@
             <img src="./images/logo.svg" alt="logo" id="logo"/>
             <nav>
                 <div class="navbar">
-                    <div class="dropdown">
+                    <div class="dropdown" >
                         <button class="dropbtn">Features <img src="./images/icon-arrow-down.svg" alt="arrow dropdown"/> 
                             <i class="fa fa-caret-down"></i>
                         </button>
@@ -59,14 +59,51 @@
                     <a href="#">About</a>
 
                 </div>
-                <img src="./images/icon-menu.svg" alt="menu bar" class="menuBarMobile"/>
-                
-                    
+                  
             </nav>
             <div class="access">
                 <a>Login</a>
                 <button class="btn">Register</button>
 
+            </div>
+            <!--start of mobile version-->
+            <a class="menuicon"><img src="./images/icon-menu.svg" alt="menu bar" onclick="myFunction()"/></a>
+            <div id="hamburger-icon">
+                
+                <button><img src="./images/icon-close-menu.svg" alt="close menu bar" onclick="myFunction()" class="closeicon"/></button>
+                <div class="dropdown" >
+                    <ul class="mobileMenu">
+                        <li><button class="dropbtn" onclick="dropFunction()">Features <img src="./images/icon-arrow-down.svg" alt="arrow dropdown"/> 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-contentMobile" id="content1">
+                            <a href="#"><img src="./images/icon-todo.svg" alt="list" class="listImage"/>Todo List</a>
+                            <a href="#"><img src="./images/icon-calendar.svg" alt="calendar" class="listImage"/>Calendar</a>
+                            <a href="#"><img src="./images/icon-reminders.svg" alt="reminder bell" class="listImage"/>Reminders</a>
+                            <a href="#"><img src="./images/icon-planning.svg" alt="clock" class="listImage"/>Planning</a>
+                        </div></li>
+                        <li>
+                            <button class="dropbtn" onclick="dropFunctiontwo()">Company <img src="./images/icon-arrow-down.svg" alt="arrow dropdown"/> 
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-contentMobile" id="content2">
+                                <a href="#">History</a>
+                                <a href="#">Our Team</a>
+                                <a href="#">Blog</a>
+                            </div>
+
+                        </li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="accessMobile">
+                    <a>Login</a>
+                    <button class="btn">Register</button>
+    
+                </div>
+                
             </div>
         
     
@@ -100,6 +137,39 @@
            
 
         </main>
+
+        <script>
+            function myFunction(){
+                var x=document.getElementById('hamburger-icon');
+                if (x.style.display === 'none'){
+                    x.style.display = 'block';
+                }else {
+                    x.style.display = 'none';
+                }
+            }
+            function dropFunction(){
+                var x=document.getElementById('content1');
+                if (x.style.display === 'none'){
+                    x.style.display = 'block';
+                }else {
+                    x.style.display = 'none';
+                }
+            }
+
+            function dropFunctiontwo(){
+                var x=document.getElementById('content2');
+                if (x.style.display === 'none'){
+                    x.style.display = 'block';
+                }else {
+                    x.style.display = 'none';
+                }
+            }
+
+
+            
+         
+
+        </script>
      
     
     </body>
